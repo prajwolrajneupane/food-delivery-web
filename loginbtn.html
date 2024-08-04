@@ -71,6 +71,15 @@
             background-color: #222;
         }
 
+        .remember-forgot {
+            margin: 10px 0;
+            text-align: left;
+        }
+
+        .remember-forgot label {
+            font-size: 14px;
+        }
+
         .forgot-password {
             margin-top: 15px;
         }
@@ -84,27 +93,46 @@
         .forgot-password a:hover {
             text-decoration: underline;
         }
+
+        .login-register {
+            margin-top: 20px;
+        }
+
+        .login-register a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .login-register a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <div class="login-container">
         <h2>Steel Titans Login</h2>
         <img src="logo.png" alt="Gym Logo">
-        <form action="/login" method="POST">
+        <form action="login.php" method="POST">
             <div class="input-group">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="Name " required>
+                <input type="text" id="username" name="username" placeholder="Name" required>
             </div>
             <div class="input-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="password" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox" name="remember"> Remember me</label>
             </div>
             <button type="submit" class="login-button">Login</button>
             <div class="forgot-password">
-                <a href="/forgot-password">Forgot Password?</a>
+                <a href="forgot-password.php">Forgot Password?</a>
+            </div>
+            <div class="login-register">
+                <a href="joinnow.php">Don't have an Account?</a>
             </div>
         </form>
     </div>
 </body>
 </html>
-
